@@ -1,97 +1,99 @@
 ---
-title: "BuidAI"
-description: "欢迎来到您文档的新家"
+title: "产品介绍"
+description: "BuidAPI,简称必定API为AI 应用打造一站式解决方案"
 ---
 
-## 开始设置
+BuidAPI是获得微软 Azure、AWS、GCP 官方授权的合规模型聚合平台。公司依托正规云服务额度和专业技术团队，长期为众多知名应用提供高并发、稳定、可信赖的 AI API 服务。
 
-在几分钟内让您的文档网站启动并运行。
+平台基于统一的 OpenAI API 标准，聚合了 OpenAI 官方全系列模型与 Claude、Gemini、DeepSeek、阿里 Qwen 等主流大模型。开发者只需更改模型参数即可一键切换，无缝对接多家厂商，极大降低接入与运维成本。
+
+## 核心优势
+
+<Columns cols={2}>
+  <Card
+    title="统一接口"
+    icon="code"
+  >
+    兼容 OpenAI SDK，代码零改动即可平滑切换。
+  </Card>
+  <Card
+    title="多云聚合"
+    icon="server"
+  >
+    支持 OpenAI、Azure OpenAI 智能分流与内容审核，企业级稳定性。
+  </Card>
+  <Card
+    title="一站式能力"
+    icon="layer-group"
+  >
+    文本、图片生成、向量嵌入、TTS 等主流模型全覆盖。
+  </Card>
+  <Card
+    title="灵活计费"
+    icon="coins"
+  >
+    无会员、无包月，成本与业务同步增长，按量付费。
+  </Card>
+</Columns>
+
+## 快速上手
 
 <Card
-  title="从这里开始"
-  icon="rocket"
+  title="开始接入"
+  icon="bolt"
   href="/quickstart"
   horizontal
 >
-  遵循我们的三步快速入门指南。
+  充值 -> 创建 API Key -> 替换 API 地址 (https://aihubmix.com) -> 开始调用
 </Card>
 
-## 个性化定制
+### 多端点支持说明
 
-设计一个外观精美且能增强用户能力的文档网站。
+BuidAI 会同时链接 OpenAI 官方和微软 Azure OpenAI 两个端点，并随机路由请求至 Azure 进行内容审核。相比 OpenAI 官方端，Azure OpenAI 自带自动内容过滤，所以响应速度可能略慢。
 
-<Columns cols={2}>
-  <Card
-    title="本地编辑"
-    icon="pen-to-square"
-    href="/development"
-  >
-    在本地编辑您的文档并实时预览。
-  </Card>
-  <Card
-    title="自定义网站"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    自定义网站的设计和颜色以匹配您的品牌。
-  </Card>
-    <Card
-    title="设置导航"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    组织您的文档，帮助用户找到所需内容并成功使用您的产品。
-  </Card>
-  <Card
-    title="API 文档"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    从 OpenAPI 规范自动生成 API 文档。
-  </Card>
-</Columns>
+<Warning>
+请注意合规：不要请求暴力、政治、色情等敏感内容。若账号频繁触发内容过滤，我们将进行统计并与您联系核实。
+</Warning>
 
-## 创建精美页面
-
-创建世界级文档所需的一切。
+## 常用功能与场景
 
 <Columns cols={2}>
   <Card
-    title="使用 MDX 编写"
-    icon="pen-fancy"
-    href="/essentials/markdown"
+    title="应用软件"
+    icon="robot"
   >
-    使用 MDX 来设计您的文档页面。
+    支持 Lobe-chat、OpenAI Translator、Cursor、ChatX、Sider 等。
   </Card>
   <Card
-    title="代码示例"
-    icon="code"
-  href="/essentials/code"
+    title="产品开发"
+    icon="laptop-code"
   >
-    添加示例代码来演示如何使用您的产品。
-  </Card>
-  <Card
-    title="图片"
-    icon="image"
-    href="/essentials/images"
-  >
-    显示图片和其他媒体内容。
-  </Card>
-  <Card
-    title="可重用片段"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    一次编写，在您的文档中重复使用。
+    完整支持 Langchain、LlamaIndex 等库，仅需替换 API 地址和 Key。
   </Card>
 </Columns>
 
-## 需要灵感？
+## 服务特点
+
+<Columns cols={2}>
+  <Card title="稳定" icon="shield-check">
+    技术团队持续迭代，保障系统高可用。
+  </Card>
+  <Card title="方便" icon="hand-holding-heart">
+    与 OpenAI 官方 API 完全兼容，无缝切换。
+  </Card>
+  <Card title="快速" icon="gauge-high">
+    持续优化线路，保障访问与响应速度。
+  </Card>
+  <Card title="省心" icon="face-smile">
+    无包月、无会员，用多少买多少。
+  </Card>
+</Columns>
+
+## 联系我们
 
 <Card
-  title="查看完整示例"
-  icon="stars"
-  href="https://mintlify.com/customers"
+  title="联系方式"
+  icon="envelope"
 >
-  浏览我们展示的卓越文档网站案例。
+  商务合作：business@aihubmix.com | 意见反馈：feedback@aihubmix.com
 </Card>

@@ -1,0 +1,151 @@
+---
+title: "快速开始"
+description: "通过必定API在国内快速调用 ChatGPT / Claude，无需 VPN 与外卡"
+---
+
+## 概览
+
+本页将带你在 5 分钟内完成以下目标：
+
+- 在国内直连调用 ChatGPT / Claude / DeepSeek 等模型
+- 使用支付宝充值，人民币结算
+- 只改一行 `base_url` 即可迁移现有 OpenAI 代码
+
+推荐按照下面三个步骤依次完成：注册并充值、获取 API 密钥、完成首次调用。
+
+## 步骤 1：注册账号并完成充值
+
+<AccordionGroup>
+  <Accordion icon="user-plus" title="注册老张API 账号">
+    1. 访问老张API 注册页面  
+    2. 使用任意邮箱完成注册，密码至少 8 位  
+    3. 登录控制台后，可以看到：
+       - 账户余额（含赠送测试额度）
+       - 使用统计与调用日志
+       - 快速入门指引
+
+    新用户通常会获得一定量的免费 Token 测试额度，可直接用于后续示例。
+  </Accordion>
+
+  <Accordion icon="credit-card" title="使用支付宝快速充值">
+    1. 在控制台进入「充值」页面  
+    2. 选择合适金额（支持小额体验与长期使用档位）  
+    3. 通过支付宝扫码完成支付，通常为秒级到账  
+
+    充值完成后，你的账户余额会实时更新，可立即开始调用 API。
+  </Accordion>
+</AccordionGroup>
+
+## 步骤 2：获取 API 密钥
+
+<AccordionGroup>
+  <Accordion icon="key" title="在控制台复制 API Key">
+    1. 打开「令牌 / API Key」管理页面  
+    2. 找到默认密钥或创建新的密钥  
+    3. 点击右侧复制按钮，保存形如 `sk-xxxxxxxx` 的密钥值  
+
+    安全建议：
+
+    - 不要将密钥写入仓库或前端代码
+    - 使用环境变量（如 `LAOZHANG_API_KEY`）存储
+    - 一旦泄露，立即在控制台重置密钥
+  </Accordion>
+</AccordionGroup>
+
+## 步骤 3：30 秒完成首次调用
+
+### 必要配置信息
+
+调用时只需要记住 3 个核心参数：
+
+```bash
+# API 基础地址（国内直连）
+base_url: https://api.laozhang.ai/v1
+
+# API 密钥（在控制台获取，以 sk- 开头）
+api_key: sk-xxxxxxxxxxxxxxxxxxxx
+
+# 模型名称（可按需切换）
+model: gpt-4.1-mini      # 通用对话 & 日常开发
+       claude-sonnet-4-20250514
+       deepseek-v3
+```
+
+### Python 示例（推荐）
+
+```python
+from openai import OpenAI
+import os
+
+# 使用环境变量保存密钥，避免写死在代码中
+client = OpenAI(
+    api_key=os.getenv("LAOZHANG_API_KEY"),
+    base_url="https://api.laozhang.ai/v1",
+)
+
+
+def test_models():
+    models = [
+        "gpt-4.1-mini",
+        "claude-sonnet-4-20250514",
+        "deepseek-v3",
+    ]
+
+    for model in models:
+        try:
+            response = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": "你是一个友好的 AI 助手"},
+                    {"role": "user", "content": "用一句话介绍你自己"},
+                ],
+                temperature=0.7,
+                max_tokens=100,
+            )
+            print(model, "=>", response.choices[0].message.content)
+            print("使用 Token 数：", response.usage.total_tokens, "\n")
+        except Exception as e:
+            print(model, "调用失败：", e, "\n")
+
+
+if __name__ == "__main__":
+    test_models()
+```
+
+<Tip>
+如果你已经在使用 OpenAI 官方 SDK，通常只需要：
+
+1. 将 `api_key` 换成老张API 的 Key  
+2. 将 `base_url` 改为 `https://api.laozhang.ai/v1`  
+
+即可在不改业务逻辑的情况下完成迁移。
+</Tip>
+
+## 调用成功后的下一步
+
+完成首个请求后，可以继续：
+
+<CardGroup cols={2}>
+
+<Card title="查看 API 文档" icon="book" href="/api/introduction">
+  了解完整接口说明、参数含义与返回结构。
+</Card>
+
+<Card title="探索模型列表" icon="robot" href="/api/models">
+  对比不同模型的能力、价格与适用场景。
+</Card>
+
+<Card title="接入业务系统" icon="square-code" href="/essentials/code">
+  将对话、补全、嵌入等能力集成到你的产品中。
+</Card>
+
+<Card title="监控使用与成本" icon="chart-line" href="https://buidai.com">
+  在控制台查看调用日志、用量统计与费用明细。
+</Card>
+
+</CardGroup>
+
+<Note>
+常见问题包括：如何判断接入成功、如何选择合适模型、密钥泄露如何处理、余额不足时的排查方式等。  
+建议定期在控制台查看调用日志，并根据业务需求调整模型与参数配置。
+</Note>

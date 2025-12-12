@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",     
-  "name": "必定AI文档",
+  "theme": "willow",     
+  "name": "必定API文档_API对接_API中转站",
   "colors": {
     "primary": "#2563EB",
     "light": "#3B82F6",
@@ -9,65 +9,6 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
-      {
-        "tab": "首页",
-        "groups": [
-          {
-            "group": "入门指南",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "自定义配置",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "内容编写",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI 工具",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API 参考",
-        "groups": [
-          {
-            "group": "API 文档",
-            "pages": [
-              "api/introduction"
-            ]
-          },
-          {
-            "group": "端点示例",
-            "pages": [
-              "api/endpoint/get",
-              "api/endpoint/create",
-              "api/endpoint/delete",
-              "api/endpoint/webhook"
-            ]
-          }
-        ]
-      }
-    ],
     "global": {
       "anchors": [
         {
@@ -86,7 +27,71 @@
           "icon": "newspaper"
         }
       ]
-    }
+    },
+    "languages": [
+      {
+        "language": "zh",
+        "tabs": [
+          {
+            "tab": "首页",
+            "groups": [
+              {
+                "group": "产品基础",
+                "pages": [
+                  "index",
+                  "start",
+                  "development"
+                ]
+              },
+              {
+                "group": "自定义配置",
+                "pages": [
+                  "essentials/settings",
+                  "essentials/navigation"
+                ]
+              },
+              {
+                "group": "内容编写",
+                "pages": [
+                  "essentials/markdown",
+                  "essentials/code",
+                  "essentials/images",
+                  "essentials/reusable-snippets"
+                ]
+              },
+              {
+                "group": "AI 工具",
+                "pages": [
+                  "ai-tools/cursor",
+                  "ai-tools/claude-code",
+                  "ai-tools/windsurf"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "API 参考",
+            "groups": [
+              {
+                "group": "API 文档",
+                "pages": [
+                  "api/introduction"
+                ]
+              },
+              {
+                "group": "端点示例",
+                "pages": [
+                  "api/endpoint/get",
+                  "api/endpoint/create",
+                  "api/endpoint/delete",
+                  "api/endpoint/webhook"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
