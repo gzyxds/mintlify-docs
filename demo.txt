@@ -1,0 +1,21 @@
+在添加一个使用场景的分类， 写作样式保持官方的风格,
+
+#对话型 AI
+Cherry Studio国内ChatGPT使用配置指南
+Chatbox AI
+Open WebUI国内ChatGPT部署配置指南
+ChatGPT Next Web国内部署配置指南
+
+# 编程开发
+Cursor
+Cline
+Claude Code
+Codex CLI
+
+#技术工程
+LangChai
+Dify
+
+#翻译场景
+Bob 翻译
+沉浸式翻译
