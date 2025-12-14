@@ -1,12 +1,12 @@
 产品基础
 快速开始
-只需简单三步，即可开始使用 API易 访问各种 AI 模型。
+只需简单三步，即可开始使用 必定AI 访问各种 AI 模型。
 
 ​
 第一步：账户准备
 ​
 1.1 注册账号
-访问 API易官网 注册账号：
+访问 必定AI官网 注册账号：
 使用邮箱注册（推荐高校、企业邮箱注册）
 验证邮箱地址
 登录控制台
@@ -63,13 +63,13 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ​
 下一步
-恭喜！您已经成功完成了 API易 的接入。接下来您可以：
+恭喜！您已经成功完成了 必定AI 的接入。接下来您可以：
 查看 API 文档
 了解完整的 API 接口说明
 探索模型列表
 查看所有支持的 AI 模型
 集成到应用
-将 API易 集成到各种工具
+将 必定AI 集成到各种工具
 查看使用统计
 在控制台监控使用情况
 ​
@@ -84,7 +84,7 @@ print(response.choices[0].message.content)
 }
 ​
 支持哪些编程语言？
-API易 兼容 OpenAI API 标准，支持所有 OpenAI SDK 支持的语言：
+必定AI 兼容 OpenAI API 标准，支持所有 OpenAI SDK 支持的语言：
 Python
 JavaScript/TypeScript
 Java
